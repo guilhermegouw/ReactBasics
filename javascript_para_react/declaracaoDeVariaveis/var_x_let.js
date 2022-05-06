@@ -43,3 +43,44 @@ function returnCarLet() {
 }
 
 returnCarLet()
+
+
+/**
+ * Exemplo de laços de repetição:
+ * 
+ * var: O indice fora do laço é impresso sem problema algum.
+ * let: O indice existe somente dentro do laço.
+ */
+
+function lacoVar() {
+    for (var i = 2000; i < 2022; i++) {
+        console.log('var: ' + i);
+    }
+    console.log('Indice fora do laço: ' + i)
+}
+
+function lacoLet() {
+    for (let i = 2000; i < 2022; i++) {
+        console.log('let: ' + i);
+    }
+    // console.log('Indice fora do laço: ' + i)
+}
+
+lacoVar()
+lacoLet()
+
+/**
+ * Outra diferença marcante entre var e let é que quando uma variável declarada com var essa variável é
+ * elevada para o início do nosso código quando ele é executado.
+ * Por exemplo:
+ */
+variavelElevada = 23;
+var variavelElevada;
+console.log(variavelElevada);
+// esse código irá rodar sem problemas.
+
+/** 
+ * Por outro lado se a variável for declarada com let da mesma maneira que a anterior, nós 
+ * receberiamos um erro dizendo que a variável variavelElevada não pode ser acessada antes de 
+ * inicializada.
+ */
